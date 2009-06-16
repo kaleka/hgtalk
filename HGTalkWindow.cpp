@@ -28,6 +28,9 @@ HGTalkWindow::HGTalkWindow()
 	add(*pHGTalkLoginBox);
 
 	signal_login_ok.connect(sigc::mem_fun(this, &HGTalkWindow::on_login_ok));
+	signal_show_hide.connect(sigc::mem_fun(this, &HGTalkWindow::on_show_hide));
+
+	show_all();
 }
 
 HGTalkWindow::~HGTalkWindow()
@@ -40,3 +43,19 @@ void HGTalkWindow::on_login_ok()
 	HGTalkMainBox * pMainBox = Gtk::manage(new HGTalkMainBox);
 	add(*pMainBox);
 }
+
+void HGTalkWindow::on_show_hide()
+{
+	if(is_visible())
+	  hide();
+	else
+	  show();
+}
+
+bool HGTalkWindow::on_delete_event(GdkEventAny * event)
+{
+	signal_show_hide.emit();
+
+	return true;
+}
+

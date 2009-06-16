@@ -16,7 +16,7 @@ int main(int argc, char * argv[])
 	gpHGTalkWindow = new HGTalkWindow;
 	gpHGTalkStatusIcon = new HGTalkStatusIcon(HGTALK_STATUS_AVAILABLE);
 
-	Gtk::Main::run(*gpHGTalkWindow);
+	kit.run();
 
 	delete gpHGTalkStatusIcon;
 	delete gpHGTalkWindow;

@@ -4,6 +4,7 @@
 
 #include "HGTalkStatusIcon.h"
 #include "Common.h"
+#include "main.h"
 
 HGTalkStatusIcon::HGTalkStatusIcon(int icon)
 {
@@ -41,5 +42,6 @@ void HGTalkStatusIcon::on_popup_menu(guint button, guint32 activate_time)
 
 void HGTalkStatusIcon::on_activate()
 {
+	gpHGTalkWindow->signal_show_hide.emit();
 }
 
