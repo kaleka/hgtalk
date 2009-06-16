@@ -12,12 +12,15 @@
 #define HGTALK_PASSWORD			"Password:"
 #define HGTALK_REMPASS			"Remember password"
 #define HGTALK_LOGIN			"Login"
-#define HGTALK_SETTINGS			"Settings"
+#define HGTALK_PREFERENCES		"Preferences"
 #define HGTALK_ABOUT			"About"
-#define HGTALK_WEBSITE			"http://www.heihaier.org"
+#define HGTALK_QUIT				"Quit"
+#define HGTALK_WEBSITE			"http://hgtalk.googlecode.com"
 #define HGTALK_VERSION			"0.1"
-#define HGTALK_COPYRIGHT		"Copyright by Google Inc."
+#define HGTALK_COPYRIGHT		"Copyright (c) 2009 HGTalk."
 #define HGTALK_CONFIG_FILE		"hgtalk.dat"
+#define HGTALK_AUTHOR_HEIHAIER	"Heihaier (admin@heihaier.org)"
+#define HGTALK_LICENSE			"This program is licenced under BSD Licence."
 
 // Resources
 #define HGTALK_ICON_16		"./misc/gtalk-16.png"

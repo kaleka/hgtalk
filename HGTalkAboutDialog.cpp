@@ -12,7 +12,12 @@ HGTalkAboutDialog::HGTalkAboutDialog()
 	set_program_name(HGTALK_NAME);
 	set_version(HGTALK_VERSION);
 	set_copyright(HGTALK_COPYRIGHT);
+	set_license(HGTALK_LICENSE);
 	set_website(HGTALK_WEBSITE);
+	
+	std::vector <Glib::ustring> authors;
+	authors.push_back(HGTALK_AUTHOR_HEIHAIER);
+	set_authors(authors);
 }
 
 HGTalkAboutDialog::~HGTalkAboutDialog()

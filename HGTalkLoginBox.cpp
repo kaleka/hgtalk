@@ -4,7 +4,7 @@
 
 #include "HGTalkLoginBox.h"
 #include "Common.h"
-#include "HGTalkSettingsButton.h"
+#include "HGTalkPreferencesButton.h"
 #include "HGTalkAboutButton.h"
 #include "HGTalkLoginButton.h"
 #include "HGTalkUsernameEntry.h"
@@ -48,7 +48,7 @@ HGTalkLoginBox::HGTalkLoginBox()
 	pack_start(*pButtonBox, FALSE, TRUE, 0);
 
 	Gtk::LinkButton * pLinkButton =
-		Gtk::manage(new HGTalkSettingsButton);
+		Gtk::manage(new HGTalkPreferencesButton);
 	pButtonBox->pack_start(*pLinkButton, FALSE, FALSE, 0);
 	pLinkButton = Gtk::manage(new HGTalkAboutButton);
 	pButtonBox->pack_start(*pLinkButton, FALSE, FALSE, 0);
