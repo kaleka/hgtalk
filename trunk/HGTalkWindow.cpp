@@ -5,6 +5,7 @@
 #include "HGTalkWindow.h"
 #include "Common.h"
 #include "HGTalkLoginBox.h"
+#include "HGTalkMainBox.h"
 
 HGTalkWindow::HGTalkWindow()
 {
@@ -35,4 +36,7 @@ HGTalkWindow::~HGTalkWindow()
 
 void HGTalkWindow::on_login_ok()
 {
+	remove();
+	HGTalkMainBox * pMainBox = Gtk::manage(new HGTalkMainBox);
+	add(*pMainBox);
 }
