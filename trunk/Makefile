@@ -5,8 +5,8 @@ LD=$(CX)
 RM=rm -f
 
 # Compilation Configurations
-CXFLAGS=-g `pkg-config --cflags gtkmm-2.4 jinglebase-0.3 jinglexmpp-0.3`
-LDFLAGS=-g `pkg-config --libs gtkmm-2.4 jinglebase-0.3 jinglexmpp-0.3`
+CXFLAGS=-g `pkg-config --cflags gtkmm-2.4`
+LDFLAGS=-g `pkg-config --libs gtkmm-2.4`
 
 # Objectives
 TARGET=hgtalk
@@ -15,7 +15,7 @@ OBJECT=main.o \
 	   HGTalkLoginBox.o \
 	   HGTalkMainBox.o \
 	   HGTalkStatusIcon.o \
-	   HGTalkSettingsButton.o \
+	   HGTalkPreferencesButton.o \
 	   HGTalkAboutButton.o \
 	   HGTalkLoginButton.o \
 	   HGTalkConfig.o \
@@ -23,9 +23,18 @@ OBJECT=main.o \
 	   HGTalkPasswordEntry.o \
 	   HGTalkRempassButton.o \
 	   HGTalkAboutDialog.o \
-	   HGTalkSettingsDialog.o \
+	   HGTalkPreferencesDialog.o \
 	   HGTalkUserdata.o \
-	   HGTalkTalkWindow.o
+	   HGTalkTalkWindow.o \
+	   HGTalkAddBuddyWindow.o \
+	   HGTalkAddGroupWindow.o \
+	   HGTalkFileTransfersWindow.o \
+	   HGTalkUserinfoWindow.o \
+	   HGTalkStatusMenu.o \
+	   HGTalkAboutMenuItem.o \
+	   HGTalkPreferencesMenuItem.o \
+	   HGTalkQuitMenuItem.o \
+	   HGTalkMainMenuBar.o
 DEPEND=$(OBJECT:.o=.dep)
 
 # Procedures
