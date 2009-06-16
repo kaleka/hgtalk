@@ -10,6 +10,7 @@
 #include "HGTalkUsernameEntry.h"
 #include "HGTalkPasswordEntry.h"
 #include "HGTalkRempassButton.h"
+#include "HGTalkWindow.h"
 
 HGTalkLoginBox::HGTalkLoginBox()
 {

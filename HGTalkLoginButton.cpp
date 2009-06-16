@@ -4,6 +4,7 @@
 
 #include "HGTalkLoginButton.h"
 #include "Common.h"
+#include "main.h" // Test
 
 HGTalkLoginButton::HGTalkLoginButton()
 {
@@ -16,4 +17,5 @@ HGTalkLoginButton::~HGTalkLoginButton()
 
 void HGTalkLoginButton::on_clicked()
 {
+	gpHGTalkWindow->signal_login_ok.emit(); // Test
 }
