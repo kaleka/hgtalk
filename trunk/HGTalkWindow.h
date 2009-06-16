@@ -10,15 +10,17 @@
 class HGTalkWindow : public Gtk::Window
 {
 private:
-
 protected:
 	virtual void on_login_ok();
+	virtual void on_show_hide();
+	virtual bool on_delete_event(GdkEventAny * event);
 
 public:
 	HGTalkWindow();
 	~HGTalkWindow();
 
 	sigc::signal <void> signal_login_ok;
+	sigc::signal <void> signal_show_hide;
 };
 
 #endif /* __HGTALK_WINDOW_H__ */

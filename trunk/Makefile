@@ -34,7 +34,10 @@ OBJECT=main.o \
 	   HGTalkAboutMenuItem.o \
 	   HGTalkPreferencesMenuItem.o \
 	   HGTalkQuitMenuItem.o \
-	   HGTalkMainMenuBar.o
+	   HGTalkMainMenuBar.o \
+	   HGTalkAddBuddyMenuItem.o \
+	   HGTalkAddGroupMenuItem.o \
+	   HGTalkFileTransfersMenuItem.o
 DEPEND=$(OBJECT:.o=.dep)
 
 # Procedures
