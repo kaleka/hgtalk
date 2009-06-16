@@ -10,6 +10,8 @@
 class HGTalkLoginButton : public Gtk::Button
 {
 private:
+protected:
+	virtual void on_clicked();
 public:
 	HGTalkLoginButton();
 	~HGTalkLoginButton();

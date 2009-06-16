@@ -26,12 +26,13 @@ HGTalkWindow::HGTalkWindow()
 		Gtk::manage(new HGTalkLoginBox);
 	add(*pHGTalkLoginBox);
 
-	m_pHGTalkStatusIcon = new HGTalkStatusIcon(HGTALK_STATUS_AVAILABLE);
+	signal_login_ok.connect(sigc::mem_fun(this, &HGTalkWindow::on_login_ok));
 }
 
 HGTalkWindow::~HGTalkWindow()
 {
-	if(m_pHGTalkStatusIcon)
-	  delete m_pHGTalkStatusIcon;
 }
 
+void HGTalkWindow::on_login_ok()
+{
+}

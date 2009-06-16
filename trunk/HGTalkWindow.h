@@ -6,16 +6,19 @@
 #define __HGTALK_WINDOW_H__
 
 #include <gtkmm/window.h>
-#include "HGTalkStatusIcon.h"
 
 class HGTalkWindow : public Gtk::Window
 {
 private:
-	HGTalkStatusIcon * m_pHGTalkStatusIcon;
+
+protected:
+	virtual void on_login_ok();
 
 public:
 	HGTalkWindow();
 	~HGTalkWindow();
+
+	sigc::signal <void> signal_login_ok;
 };
 
 #endif /* __HGTALK_WINDOW_H__ */

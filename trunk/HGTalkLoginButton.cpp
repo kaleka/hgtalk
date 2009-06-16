@@ -13,3 +13,7 @@ HGTalkLoginButton::HGTalkLoginButton()
 HGTalkLoginButton::~HGTalkLoginButton()
 {
 }
+
+void HGTalkLoginButton::on_clicked()
+{
+}

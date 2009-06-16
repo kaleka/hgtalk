@@ -7,6 +7,9 @@
 
 HGTalkStatusIcon::HGTalkStatusIcon(int icon)
 {
+	signal_popup_menu().connect(sigc::mem_fun(this, &HGTalkStatusIcon::on_popup_menu));
+	signal_activate().connect(sigc::mem_fun(this, &HGTalkStatusIcon::on_activate));
+
 	set_tooltip(HGTALK_WINDOW_TITLE);
 	set_icon(icon);
 }
@@ -29,5 +32,14 @@ void HGTalkStatusIcon::set_icon(int icon)
 		break;
 	}
 	set_from_file(HGTALK_ICON_16);
+}
+
+void HGTalkStatusIcon::on_popup_menu(guint button, guint32 activate_time)
+{
+	popup_menu_at_position(m_StatusMenu, button, activate_time);
+}
+
+void HGTalkStatusIcon::on_activate()
+{
 }
 

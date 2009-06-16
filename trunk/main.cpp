@@ -6,6 +6,7 @@
 
 #include "main.h"
 #include <gtkmm/main.h>
+#include "Common.h"
 
 int main(int argc, char * argv[])
 {
@@ -13,9 +14,11 @@ int main(int argc, char * argv[])
 
 	gpConfig = new HGTalkConfig;
 	gpHGTalkWindow = new HGTalkWindow;
+	gpHGTalkStatusIcon = new HGTalkStatusIcon(HGTALK_STATUS_AVAILABLE);
 
 	Gtk::Main::run(*gpHGTalkWindow);
 
+	delete gpHGTalkStatusIcon;
 	delete gpHGTalkWindow;
 	delete gpConfig;
 
