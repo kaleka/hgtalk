@@ -4,13 +4,14 @@
 
 #include "HGTalkUsernameEntry.h"
 #include "main.h"
+#include "HGTalkApp.h"
 
 HGTalkUsernameEntry::HGTalkUsernameEntry()
 {
 	set_alignment(0.5);
 	set_max_length(32);
 
-	set_text(gpConfig->get_username());
+	set_text(g_pHGTalkApp->get_config()->get_username());
 }
 
 HGTalkUsernameEntry::~HGTalkUsernameEntry()
@@ -19,5 +20,5 @@ HGTalkUsernameEntry::~HGTalkUsernameEntry()
 
 void HGTalkUsernameEntry::on_hide()
 {
-	gpConfig->set_username(get_text());
+	g_pHGTalkApp->get_config()->set_username(get_text());
 }

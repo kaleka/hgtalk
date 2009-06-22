@@ -5,18 +5,12 @@
 #ifndef __MAIN_H__
 #define __MAIN_H__
 
-#include "HGTalkConfig.h"
-#include "HGTalkWindow.h"
-#include "HGTalkStatusIcon.h"
+#include "HGTalkApp.h"
 
 #ifdef __G_VAR__
-HGTalkConfig * gpConfig = NULL;
-HGTalkWindow * gpHGTalkWindow = NULL;
-HGTalkStatusIcon * gpHGTalkStatusIcon = NULL;
+HGTalkApp * g_pHGTalkApp = NULL;
 #else
-extern HGTalkConfig * gpConfig;
-extern HGTalkWindow * gpHGTalkWindow;
-extern HGTalkStatusIcon * gpHGTalkStatusIcon;
+extern HGTalkApp * g_pHGTalkApp;
 #endif /* __G_VAR__ */
 
 #endif /* __MAIN_H__ */

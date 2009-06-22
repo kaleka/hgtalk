@@ -11,6 +11,7 @@ LDFLAGS=-g `pkg-config --libs gtkmm-2.4`
 # Objectives
 TARGET=hgtalk
 OBJECT=main.o \
+	   HGTalkApp.o \
 	   HGTalkWindow.o \
 	   HGTalkLoginBox.o \
 	   HGTalkMainBox.o \

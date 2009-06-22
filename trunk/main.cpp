@@ -6,21 +6,18 @@
 
 #include "main.h"
 #include <gtkmm/main.h>
-#include "Common.h"
 
 int main(int argc, char * argv[])
 {
 	Gtk::Main kit(argc, argv);
 
-	gpConfig = new HGTalkConfig;
-	gpHGTalkWindow = new HGTalkWindow;
-	gpHGTalkStatusIcon = new HGTalkStatusIcon(HGTALK_STATUS_AVAILABLE);
+	g_pHGTalkApp = new HGTalkApp;
 
+	g_pHGTalkApp->init();
 	kit.run();
+	g_pHGTalkApp->term();
 
-	delete gpHGTalkStatusIcon;
-	delete gpHGTalkWindow;
-	delete gpConfig;
+	delete g_pHGTalkApp;
 
 	return 0;
 }
