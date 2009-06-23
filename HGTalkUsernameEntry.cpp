@@ -18,7 +18,3 @@ HGTalkUsernameEntry::~HGTalkUsernameEntry()
 {
 }
 
-void HGTalkUsernameEntry::on_hide()
-{
-	g_pHGTalkApp->get_config()->set_username(get_text());
-}

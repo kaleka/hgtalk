@@ -6,6 +6,8 @@
 #include "Common.h"
 #include <gtkmm/stock.h>
 #include <gtkmm/image.h>
+#include "HGTalkApp.h"
+#include "main.h"
 
 HGTalkFileTransfersMenuItem::HGTalkFileTransfersMenuItem()
 {
@@ -17,4 +19,9 @@ HGTalkFileTransfersMenuItem::HGTalkFileTransfersMenuItem()
 
 HGTalkFileTransfersMenuItem::~HGTalkFileTransfersMenuItem()
 {
+}
+
+void HGTalkFileTransfersMenuItem::on_activate()
+{
+	g_pHGTalkApp->get_file_transfers_window()->signal_show_hide.emit();
 }

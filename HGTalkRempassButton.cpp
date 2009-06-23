@@ -17,7 +17,3 @@ HGTalkRempassButton::~HGTalkRempassButton()
 {
 }
 
-void HGTalkRempassButton::on_hide()
-{
-	g_pHGTalkApp->get_config()->set_rempass(get_active());
-}

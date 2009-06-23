@@ -14,6 +14,10 @@ private:
 	Gtk::Entry * m_pPassword;
 	Gtk::CheckButton * m_pRemPass;
 	Gtk::Label * m_pTip;
+
+protected:
+	virtual void on_parent_changed(Gtk::Widget * previous_parent);
+
 public:
 	HGTalkLoginBox();
 	~HGTalkLoginBox();

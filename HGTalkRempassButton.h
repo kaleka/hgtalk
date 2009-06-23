@@ -11,7 +11,6 @@ class HGTalkRempassButton : public Gtk::CheckButton
 {
 private:
 protected:
-	virtual void on_hide();
 
 public:
 	HGTalkRempassButton();
