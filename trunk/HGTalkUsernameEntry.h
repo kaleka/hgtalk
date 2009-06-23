@@ -11,7 +11,6 @@ class HGTalkUsernameEntry : public Gtk::Entry
 {
 private:
 protected:
-	virtual void on_hide();
 
 public:
 	HGTalkUsernameEntry();

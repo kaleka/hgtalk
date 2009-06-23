@@ -11,6 +11,8 @@
 #include "HGTalkPasswordEntry.h"
 #include "HGTalkRempassButton.h"
 #include "HGTalkWindow.h"
+#include "HGTalkApp.h"
+#include "main.h"
 
 HGTalkLoginBox::HGTalkLoginBox()
 {
@@ -59,5 +61,12 @@ HGTalkLoginBox::HGTalkLoginBox()
 
 HGTalkLoginBox::~HGTalkLoginBox()
 {
+}
+
+void HGTalkLoginBox::on_parent_changed(Gtk::Widget * previous_parent)
+{
+	g_pHGTalkApp->get_config()->set_username(m_pUsername->get_text());
+	g_pHGTalkApp->get_config()->set_password(m_pPassword->get_text());
+	g_pHGTalkApp->get_config()->set_rempass(m_pRemPass->get_mode());
 }
 

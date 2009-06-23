@@ -20,7 +20,3 @@ HGTalkPasswordEntry::~HGTalkPasswordEntry()
 {
 }
 
-void HGTalkPasswordEntry::on_hide()
-{
-	g_pHGTalkApp->get_config()->set_password(get_text());
-}

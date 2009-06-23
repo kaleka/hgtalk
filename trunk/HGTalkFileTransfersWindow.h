@@ -10,9 +10,14 @@
 class HGTalkFileTransfersWindow : public Gtk::Window
 {
 private:
+protected:
+	virtual void on_show_hide();
+
 public:
 	HGTalkFileTransfersWindow();
 	~HGTalkFileTransfersWindow();
+
+	sigc::signal <void> signal_show_hide;
 };
 
 #endif /* __HGTALK_FILETRANSFERS_WINDOW_H__ */

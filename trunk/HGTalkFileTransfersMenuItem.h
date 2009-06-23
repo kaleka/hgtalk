@@ -11,6 +11,8 @@ class HGTalkFileTransfersMenuItem : public Gtk::ImageMenuItem
 {
 private:
 protected:
+	virtual void on_activate();
+
 public:
 	HGTalkFileTransfersMenuItem();
 	~HGTalkFileTransfersMenuItem();

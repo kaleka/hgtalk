@@ -23,7 +23,7 @@
 #define HGTALK_HELP				"_Help"
 #define HGTALK_WEBSITE			"http://hgtalk.googlecode.com"
 #define HGTALK_VERSION			"0.1"
-#define HGTALK_COPYRIGHT		"Copyright (c) 2009 HGTalk."
+#define HGTALK_COPYRIGHT		"Copyright (C) 2009 HGTalk."
 #define HGTALK_CONFIG_FILE		"hgtalk.dat"
 #define HGTALK_AUTHOR_HEIHAIER	"Heihaier (admin@heihaier.org)"
 #define HGTALK_LICENSE			"This program is licenced under BSD Licence."
